@@ -170,7 +170,7 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!--whh-usercenter-->
+        <!--whh-taskcenter-->
         <dependency>
             <groupId>cn.itbat</groupId>
             <artifactId>taskcenter-common</artifactId>
@@ -182,11 +182,12 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!--<dependency>-->
-        <!--<groupId>com.whh</groupId>-->
-        <!--<artifactId>whh-commons-spring</artifactId>-->
-        <!--<version>1.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
+        <!-- usercenter-->
+        <dependency>
+            <groupId>cn.itbat</groupId>
+            <artifactId>usercenter-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
 
     </dependencies>
@@ -261,7 +262,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>cn.itbat.whh.usercenter.BizApplication</mainClass>
+                                    <mainClass>cn.itbat.whh.taskcenter.BizApplication</mainClass>
                                 </transformer>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">

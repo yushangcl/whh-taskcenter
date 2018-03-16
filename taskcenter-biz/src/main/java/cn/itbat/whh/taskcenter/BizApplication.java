@@ -18,6 +18,7 @@ public class BizApplication {
         logger.info(">>>>> spring-boot 正在启动 <<<<<");
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-config.xml");
         logger.info(">>>>> spring-boot 启动完成 <<<<<");
+
         Thread.sleep(Long.MAX_VALUE);
 
     }

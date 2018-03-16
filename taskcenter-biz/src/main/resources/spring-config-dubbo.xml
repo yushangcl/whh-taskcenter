@@ -9,7 +9,7 @@
     <context:property-placeholder location="classpath:service-config.properties" ignore-unresolvable="true" />
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="whh-service"  />
+    <dubbo:application name="whh-taskcenter"  />
 
     <!-- 注册中心服务地址 -->
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" />
@@ -23,12 +23,17 @@
         connections="${dubbo.provider.connections}"/>
 
     <!-- 通过注解发布服务 -->
-    <dubbo:annotation package="cn.itbat.whh.usercenter.service"/>
+    <dubbo:annotation package="cn.itbat.whh.taskcenter.service"/>
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="cn.itbat.whh.taskcenter.service.CmUserTaskService" ref="cmUserService"
-                   version="1.0.0.dev" group="impl"/>
+    <dubbo:service interface="cn.itbat.whh.taskcenter.service.CmUserTaskService" ref="cmUserTaskService"
+                   version="1.0.0.${dubbo.version.surfix}" group="impl"/>
     <!-- 具体服务接口的实现 -->
-    <bean id="cmUserService" class="cn.itbat.whh.taskcenter.service.impl.CmUserTaskServiceImpl" />
+    <bean id="cmUserTaskService" class="cn.itbat.whh.taskcenter.service.impl.CmUserTaskServiceImpl" />
+
+
+    <!-- dubbo_consumer -->
+    <dubbo:reference interface="cn.itbat.whh.usercenter.service.CmUserService"
+                     id="cmUserService" version="1.0.0.${dubbo.version.surfix}" group="impl"/>
 
 </beans>
