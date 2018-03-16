@@ -15,8 +15,8 @@
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" />
 
     <!-- 用dubbo协议在30001 -->
-    <dubbo:protocol name="dubbo" port="20661" />
-    <dubbo:protocol name="hessian" port="9090" />
+    <dubbo:protocol name="dubbo" port="20662" />
+    <dubbo:protocol name="hessian" port="9092" />
 
     <!-- 服务和协议的缺省值配置 -->
     <dubbo:provider group="impl" timeout="${dubbo.provider.timeout}" retries="0"
