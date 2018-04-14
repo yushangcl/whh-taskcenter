@@ -32,7 +32,7 @@ public class Generator {
      * @param args
      */
     public static void main(String[] args) throws Exception {
-        String tableNames = "CM_USER";
+        String tableNames = "ba_defined_code";
         MybatisGeneratorUtil.generator(PROJECT_DIR, MODULE, tableNames, PACKAGE_NAME, LAST_INSERT_ID_TABLES, "mysql");
     }
 
