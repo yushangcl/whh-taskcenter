@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 代码生成类
- * Created by ZhangShuzheng on 2017/1/10.
- */
+ * @author log.r   (;￢＿￢)   
+ * @date 2018-04-14 下午10:03
+ **/
 public class Generator {
 
     // 根据命名规范，只修改此常量值即可
