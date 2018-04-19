@@ -74,12 +74,13 @@
     <bean id="ucsqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="ucdruidDataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
-        <property name="mapperLocations" value="classpath*:cn/itbat/whh/taskcenter/dao/mapper/*Mapper.xml"/>
+        <property name="mapperLocations" value="classpath*:cn/itbat/whh/taskcenter/dao/mapper/*Mapper.xml,
+        classpath*:com/whh/common/ukid/mapper/*Mapper.xml"/>
         <!--classpath*:com/whh/commons/ukid/mapper/*Mapper.xml"/>-->
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="cn.itbat.whh.taskcenter.dao.mapper"/>
+        <property name="basePackage" value="cn.itbat.whh.taskcenter.dao.mapper,com.whh.common.ukid.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="ucsqlSessionFactory"/>
     </bean>
 
