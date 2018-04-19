@@ -14,6 +14,8 @@
     <import resource="spring-config-db.xml" />
     <import resource="spring-config-redis.xml"/>
     <import resource="spring-config-dubbo.xml" />
+    <import resource="classpath*:spring-context-config.xml"/>
+    <import resource="classpath*:spring-ukid-initialize.xml"/>
 
 
     <!--开启定时注解-->
